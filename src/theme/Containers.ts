@@ -9,6 +9,7 @@ const Containers = styled.div<Iconteiner>`
 	height: 770px;
 	display: grid;
   	grid-template-columns: 1fr ;
+	border-radius: 40px;
 `
 
 export default Containers

@@ -32,12 +32,6 @@ const Titl = styled.h3`
 	color: #252C3A;
 	display: inline;
 `
-const Box = styled.div`
-	margin-top: 5px;
-	height: 770px;
-	display: grid;
-  	grid-template-columns: 1fr ;
-`
 
 const Total = styled.span`
 	padding-top: 10px;
