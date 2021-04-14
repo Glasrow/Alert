@@ -1,12 +1,11 @@
-import React from 'react';
 import "./data/exampletemplate"
-import Container from "./tag/Box"
+import Container from "./tag/Boxs"
 import styled from "styled-components"
 import './App.css';
 import {ThemeProvider} from "styled-components"
 import theme from './theme'
 import GlobaStyle from "./theme/glob"
-import Tolbar from './theme/Tolbar'
+import Box from './theme/Box'
 
 
 const Wrapper = styled.div`
@@ -23,9 +22,9 @@ function App() {
 		<ThemeProvider theme={theme}>
 			<GlobaStyle/>
 			<Wrapper>
-					<Tolbar >
-						<Container/>
-					</Tolbar>
+				<Box width={2} height={4} bg={0} borderRadius={2} boxShadow={0} >
+					<Container/>
+				</Box>
 			</Wrapper>
 		</ThemeProvider>
 	);

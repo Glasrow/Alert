@@ -8,16 +8,7 @@ export enum MessageType {
   FLASH = 2,
 }
 
-function getMessageTypeValue(type: MessageType) {
-  switch(type) {
-    case MessageType.FLASH:
-      return "Flash";
-    case MessageType.NORMAL:
-      return "Normal"
-  }
-}
-
-export function getMessageAlertType(type: MessageType) {
+export function getMessageType(type: MessageType) {
   switch(type) {
     case MessageType.FLASH:
       return "Flash";
@@ -30,8 +21,24 @@ export function isNil(val: any): val is null | undefined | void {
   return val == null
 }
 
-export function isSMS(channel: MessageChannel){
+export function isSMS(channel: MessageChannel| undefined){
   return channel === MessageChannel.SMS
+}
+
+export function getAlertType(type: AlertType) {
+  switch(type) {
+    case AlertType.CMAS_EXTREME:
+      return "CMAS_EXTREME";
+    case AlertType.CMAS_SEVERE:
+      return "CMAS_SEVERE"  
+    case AlertType.ETWS_TSUNAMI:
+      return "ETWS_TSUNAMI";
+    case AlertType.ETWS_EARTHQUAKE:
+      return "ETWS_EARTHQUAKE" 
+    case AlertType.ETWS_OTHER:
+       return "ETWS_OTHER";
+ 
+  }
 }
 
 export enum AlertType {
